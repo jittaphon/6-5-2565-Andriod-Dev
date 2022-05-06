@@ -85,6 +85,8 @@ class MyHomePage extends StatelessWidget {
           } else if (snapshot.hasData) {
             return ListView.builder(itemCount: snapshot.data!.length,itemBuilder: (context,i){
               return ListTile(
+                onTap: (){},
+                leading: Icon(Icons.map),
                 title: Text(snapshot.data![i].title),
               );
             },);
